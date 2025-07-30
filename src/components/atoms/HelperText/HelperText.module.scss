@@ -1,0 +1,13 @@
+@use "../../../styles/variables" as *;
+
+.info {
+  color: $info;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.error {
+  color: $error;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

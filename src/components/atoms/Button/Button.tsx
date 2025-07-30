@@ -2,26 +2,30 @@ import type { ReactNode } from "react";
 import styles from "./Button.module.scss";
 import classNames from "classnames";
 
-interface ButtonProps {
-  children: ReactNode;
-  variant?: "primary" | "secondary";
-  content: string;
+type ButtonProps = {
+  children?: ReactNode;
+  variant?: "primary" | "secondary" | "outline";
+  type?: "button" | "submit" | "reset";
+  textualContent?: string;
   onClick?: () => void;
-}
+  fullWidth?: boolean;
+};
 
 export const Button = ({
   children,
   onClick,
   variant = "primary",
-  content,
+  textualContent,
+  type = "button",
+  fullWidth = false,
 }: ButtonProps) => {
+  const buttonClass = classNames(styles.button, styles[`button--${variant}`], {
+    [styles["button--full"]]: fullWidth,
+  });
   return (
     <>
-      <button
-        className={classNames(styles.button, styles[variant])}
-        onClick={onClick}
-      >
-        {content}
+      <button className={buttonClass} onClick={onClick} type={type}>
+        {textualContent}
         {children}
       </button>
     </>

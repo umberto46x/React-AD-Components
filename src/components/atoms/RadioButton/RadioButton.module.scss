@@ -1,0 +1,16 @@
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  input[type="radio"] {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+
+  label {
+    cursor: pointer;
+    user-select: none;
+  }
+}

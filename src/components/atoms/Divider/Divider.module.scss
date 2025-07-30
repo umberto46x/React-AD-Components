@@ -1,0 +1,14 @@
+@use "../../../styles/variables" as *;
+
+.horizontal {
+  height: 1px;
+  width: 100%;
+  background-color: $gray-light;
+  margin: 1rem 0;
+}
+
+.vertical {
+  width: 1px;
+  height: 100%;
+  background-color: $gray-light;
+}
