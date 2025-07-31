@@ -1,0 +1,31 @@
+
+@use "../../../styles/variables" as *;
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+  .tooltipText {
+    visibility: hidden;
+    width: max-content;
+    background-color: $gray-dark;
+    color: $gray-light;
+    text-align: center;
+    padding: 0.3rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &:hover .tooltipText {
+    visibility: visible;
+    opacity: 1;
+  }
+}

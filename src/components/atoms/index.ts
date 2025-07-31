@@ -11,3 +11,14 @@ export * from "./Icon";
 export * from "./Divider";
 export * from "./Spinner";
 export * from "./Image";
+export * from "./Badge";
+export * from "./Tag";
+export * from "./Switch";
+export * from "./Tooltip";
+export * from "./Avatar";
+export * from "./Text";
+export * from "./Heading";
+export * from "./ProgressBar";
+export * from "./StatusDot";
+export * from "./IconButton";
+

@@ -1,0 +1,14 @@
+@use "../../../styles/variables" as *;
+
+.searchBar {
+  width: 100%;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid $gray-light;
+  border-radius: 20px;
+  font-size: 1rem;
+}

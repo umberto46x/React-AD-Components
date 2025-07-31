@@ -1,0 +1,24 @@
+@use "../../../styles/variables" as *;
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.online {
+  background-color: $success;
+}
+
+.offline {
+  background-color: $secondary;
+}
+
+.busy {
+  background-color: $danger;
+}
+
+.away {
+  background-color: $warning;
+}

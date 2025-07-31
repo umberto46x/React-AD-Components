@@ -1,0 +1,53 @@
+@use "../../../styles/variables" as *;
+.dropdown {
+  position: relative;
+  width: 200px;
+  font-size: 1rem;
+}
+
+.dropdownToggle {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid $gray-light;
+  background-color: white;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 0.75rem;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid $gray-light;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdownItem {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdownItem:hover {
+  background-color: $gray-light;
+}
+
+.selected {
+  font-weight: 600;
+  background-color: $gray-light;
+}
