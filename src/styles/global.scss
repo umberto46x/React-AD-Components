@@ -1,3 +1,9 @@
-@use "./variables" as *;
-@use "./mixins" as *;
-@use "./reset";
+@forward './colors';
+@forward './spacing';
+@forward './sizes';
+@forward './typography';
+@forward './themes';
+@forward './mixins';
+@forward './variables';
+@forward './reset';
+@forward './breakpoints';

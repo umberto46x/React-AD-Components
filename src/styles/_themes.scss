@@ -1,0 +1,11 @@
+@mixin theme-light {
+  --bg: #fff;
+  --text: #111;
+  --accent: #4f46e5;
+}
+
+@mixin theme-dark {
+  --bg: #111;
+  --text: #f5f5f5;
+  --accent: #ec4899;
+}

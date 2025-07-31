@@ -1,0 +1,55 @@
+@use "../../../styles/variables" as *;
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: sans-serif;
+
+  &.small {
+    .avatarImage,
+    .avatarPlaceholder {
+      width: 32px;
+      height: 32px;
+      font-size: 0.8rem;
+    }
+  }
+
+  &.medium {
+    .avatarImage,
+    .avatarPlaceholder {
+      width: 48px;
+      height: 48px;
+      font-size: 1rem;
+    }
+  }
+
+  &.large {
+    .avatarImage,
+    .avatarPlaceholder {
+      width: 64px;
+      height: 64px;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.avatarImage,
+.avatarPlaceholder {
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+  background-color: $gray-light;
+  color: white;
+  text-align: center;
+  line-height: 1;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarName {
+  font-size: 1rem;
+  color: $gray-dark;
+}

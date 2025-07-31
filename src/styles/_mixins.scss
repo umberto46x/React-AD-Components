@@ -1,0 +1,18 @@
+// Mixins utili
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin truncate($width: 100%) {
+  max-width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin responsive-font($min, $max) {
+  font-size: clamp($min, 2vw, $max);
+}

@@ -1,0 +1,18 @@
+// Button.module.scss
+@use "../../styles/colors" as *;
+@use "../../styles/spacing" as *;
+@use "../../styles/sizes" as *;
+@use "../../styles/typography" as *;
+
+.button {
+  background-color: $accent-1;
+  color: $bg-color;
+  padding: map-get($spacings, 4);
+  border-radius: $radius-md;
+  font-family: $font-body;
+  font-size: $text-base;
+
+  &:hover {
+    background-color: darken($accent-1, 10%);
+  }
+}

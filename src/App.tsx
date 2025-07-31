@@ -28,6 +28,12 @@ import {
   SearchBar,
   RadioGroup,
   DropdownMenu,
+  AvatarAndName,
+  ProductCard,
+  LoginForm,
+  FormField,
+  CheckboxGroup,
+  ModalTrigger,
 } from "./components";
 
 function App() {
@@ -36,6 +42,7 @@ function App() {
   const [InputTextContent, setInputTextContent] = useState<string>("");
   const [SelectedRadio, setSelectedRadio] = useState<string>("");
   const [SelectedDropdownMenu, setSelectedDropdownMenu] = useState<string>("");
+  const [selectedCheckboxes, setSelectedCheckboxes] = useState<string[]>([]);
   return (
     <>
       <Button
@@ -275,6 +282,86 @@ function App() {
           setSelectedDropdownMenu(e);
         }}
       ></DropdownMenu>
+      <AvatarAndName
+        name="John"
+        imageUrl="https://picsum.dev/300"
+        size="medium"
+      ></AvatarAndName>
+      <ProductCard
+        imageUrl="https://picsum.dev/300"
+        name="Random Product"
+        price={50}
+        actionName="Go To Details"
+        onProductAction={() => {
+          alert("Moved to product details");
+        }}
+      ></ProductCard>
+
+      <div
+        style={{
+          width: "25%",
+        }}
+      >
+        <div className="login_modal">
+          <p className="login_modal_content">handling login....</p>
+        </div>
+        <LoginForm
+          onSubmit={() => {
+            /*   let modal: HTMLElement =
+              document.getElementsByClassName("login_modal")[0];
+
+            modal.style.display = "block";
+
+            setTimeout(() => {
+              modal.style.display = "none";
+            }, 2000); */
+          }}
+        ></LoginForm>
+      </div>
+      {/* Formfield */}
+      <div
+        style={{
+          width: "25%",
+        }}
+      >
+        <p>{InputTextContent}</p>
+        <FormField
+          label="User"
+          name="User"
+          type="text"
+          required
+          value={InputTextContent}
+          onChange={(e) => {
+            setInputTextContent(e.currentTarget.value);
+          }}
+        ></FormField>
+      </div>
+
+      <CheckboxGroup
+        selected={selectedCheckboxes}
+        onChange={(cb) => {
+          setSelectedCheckboxes(cb);
+          console.log(cb);
+        }}
+        options={[
+          { label: "php", value: "php" },
+          { label: "node", value: "node" },
+          { label: "rust", value: "rust" },
+        ]}
+        label="BE Languages"
+      ></CheckboxGroup>
+      <ModalTrigger
+        triggerLabel="Show Details"
+        modalTitle="Details"
+        modalWidth="50%"
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut esse quae
+          porro, vel quod alias perspiciatis cupiditate facilis vitae doloremque
+          iste ipsum reprehenderit commodi voluptates possimus nam repellendus
+          quaerat nisi.
+        </p>
+      </ModalTrigger>
     </>
   );
 }

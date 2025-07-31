@@ -1,0 +1,36 @@
+@use "../../../styles/variables" as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.label {
+  font-weight: 500;
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.required {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid $gray-light;
+  border-radius: 6px;
+  font-size: 1rem;
+
+  &.error {
+    border-color: red;
+  }
+}
+
+.errorMessage {
+  font-size: 0.85rem;
+  color: red;
+  margin-top: -0.3rem;
+}

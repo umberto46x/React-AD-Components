@@ -1,0 +1,36 @@
+@use "../../../styles/variables" as *;
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.groupLabel {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: -0.3rem;
+}
